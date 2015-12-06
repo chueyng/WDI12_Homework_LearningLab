@@ -1,0 +1,2 @@
+ALTER TABLE movies ADD COLUMN plot TEXT;
+ALTER TABLE movies ADD COLUMN actors TEXT;

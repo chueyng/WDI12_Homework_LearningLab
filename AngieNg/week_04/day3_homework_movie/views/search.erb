@@ -1,0 +1,6 @@
+<h1>Search Result Page: </h1>
+<ol>
+<%@movies_result_list.zip(@movies_url) do |movie_title, movie_url| %>
+  <li><a href="/movie?movie_url=<%=movie_url%>&movie_title=<%=movie_title%>"><%= movie_title %></a></li>
+<% end %>
+</ol>

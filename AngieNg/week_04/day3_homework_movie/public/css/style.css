@@ -1,0 +1,18 @@
+body {
+  background-color: #ccc;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+input {
+  height: 30px;
+  width: 300px;
+}
+
+button {
+  height: 35px;
+  border-radius: 0.5em;
+}

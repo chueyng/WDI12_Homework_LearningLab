@@ -1,0 +1,67 @@
+<!--
+Lab: Famous computer scientist fansite
+Research one (or more) of the following:
+
+Ada Lovelace
+Alan Turing
+John von Neumann
+Norbert Wiener
+Claude Shannon
+Grace Hopper
+H. Marshall Mcluhan
+Donald Knuth
+Richard M. Stallman
+Larry Wall
+Yukihiro Matsumoto
+Jenn Schiffer
+Requirements
+
+At least 3 pages (example: biography, trivia, hometown)
+At least 1 Google Font
+Whatever HTML and CSS you desire
+Keep your code clean and DRY
+Start working with semantic elements: http://html5doctor.com/lets-talk-about-semantics/
+No Javascript! Even if you know how to use jQuery, see how far you can push this with pure HTML + CSS
+Don't worry about responsiveness -- desktop resolution is fine
+Your research should aim to reveal at least two things about each person:
+
+Why Joel admires them
+Something Joel doesn't already know about them
+Optional extras
+
+Experiment with http://fortawesome.github.io/Font-Awesome/
+Try embedding media (YouTube or Vimeo video, Soundcloud, podcasts)
+Try embedding a Google map (for their hometown and/or alma mater)
+
+-->	
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Famous computer scientist fansite</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<header>
+			<div class="column-left">Grace Brewster Murray Hopper </div>
+			<nav>
+				<ul>
+					<li class="fa fa-home fa-1x"><a href="index.html">Home</a></li>
+					<li><a href="trivia.html">Trivia</a></li>
+					<li><a href="hometown.html">Hometown</a></li>
+				</ul>
+			</nav>	
+		</header>
+
+		<div id="container">
+		  <div id="main-content">	
+		      	<h2>Hooper's Hometown - New York City</h2>
+		      	    <div class="content">
+		      	    	<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="642" height="443" src="https://maps.google.com/maps?hl=en&q=new york city, new york&ie=UTF8&t=roadmap&z=6&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">embedgooglemaps.com</a></small></div><div><small><a href="http://buyproxies.io/">buyproxies.io</a></small></div></iframe>
+		      	    </div>				      		
+	  	  </div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,88 @@
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
+
+*{
+  font-family: 'Inconsolata', ;
+  color: #ccc;
+}
+
+body {
+  margin: 0;
+  display: flex; 
+  overflow: hidden; 
+}
+
+a{
+  color: #FF0000;
+  font-size: 1.3em;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0000FF;
+}
+
+nav {
+  margin: 50px 0 0 100px;
+  text-decoration: underline;
+}
+
+.background {
+   background: url(http://wallpapercave.com/wp/p4iaEa4.jpg);
+   background-size: cover;
+   -webkit-filter: sepia(100%);
+   position: absolute;
+   width:100%;
+   min-height: 100vh;
+   z-index: -1;
+}
+
+.container {
+  max-width: 960px;
+  margin: 100px 100px;
+}
+
+#form-wrapper {
+  margin: 0 150px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+.content-img {
+  flex-grow: 1;
+}
+
+.content-p {
+  flex-grow: 1;
+  padding-left: 10px;
+}
+
+input {
+  height: 30px;
+  width: 300px;
+  font-size: 1em;
+  color: #000;
+}
+
+button {
+  height: 35px;
+  width: 50px;
+  border-radius: 0.5em;
+  color: #fff;
+  font-size: 1em;
+}
+
+li {
+  padding: 4px;
+}
+
+p {
+   color: #fff;
+}
+
+p.no-record {
+  margin: 10px 150px;
+  color: #FF0000;
+}

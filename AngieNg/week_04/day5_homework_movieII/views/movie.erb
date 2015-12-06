@@ -1,0 +1,19 @@
+<h1> Movie Title: <%=@movie_title%> </h1>
+
+<div class="content">
+  <div class="content-img">
+    <% if @movie_message.nil? %>
+      <a href="<%=@movie_url%>"><img src="<%=@movie_poster%>" alt=""></a>
+    <% else %>
+      <%= erb :home %>
+      <p class="no-record"><%=@movie_message%></p>
+    <% end %>
+  </div>
+  <% unless @movie_message %>
+  <div class="content-p">
+      <p><strong>Actors: </strong><%=@movie_actors%></p>
+      <p><strong>Plot: </strong> <%=@movie_plot%></p>
+  </div>
+  <% end %>  
+</div>
+

@@ -1,0 +1,82 @@
+.container {
+	max-width: 960px;
+	margin: auto;
+}
+
+.box {
+	width: 100px;
+	height: 100px;
+	border: 1px solid black;
+	text-align: center;
+	line-height: 100px;	 /* Vertical centering, set height same as container height */
+}
+
+.box:hover {
+	background-color: #cccccc;
+}
+
+.relative {
+	position: relative;
+	width: 400px;
+	height: 400px;
+}
+
+.absolute {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+}
+
+.fixed {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+}
+
+.smallbox {
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	border: 1px solid pink;
+}
+
+.abs1 {
+	top: 10%;
+	left: 10%;
+	background-color: black;
+}
+
+.abs1:hover {
+	z-index: 9999;
+}
+
+.abs2 {
+	top: 20%;
+	left: 20%;
+	background-color: green;
+}
+
+.abs3 {
+	top: 30%;
+	left: 30%;
+	background-color: yellow;
+}
+
+.abs4 {
+	top: 40%;
+	left: 40%;
+	background-color: red;
+}
+
+.newsbox {
+	border: 1px solid black;
+	width: 300px;
+	height: 300px;
+	padding: 1em;
+	overflow: auto;
+	display: inline-block;
+}
+
+.newsbox img {
+	float: right;
+}

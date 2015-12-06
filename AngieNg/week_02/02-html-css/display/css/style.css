@@ -1,0 +1,23 @@
+.fruity {
+	border: 1px solid green;
+	/* Display: inline; cannot set width or height */
+}
+
+.spicy {
+	border: 1px solid pink;
+	/* Display: block: it works when set width and height; */
+	width: 500px;
+	height: 100px;
+	display: inline-block;	/* display it side by side */
+	vertical-align: middle; /* display the middle height with side column */
+}
+
+.invisible {
+	/* display: none; */
+	visibility: hidden;	/* still take up the space to display nothing */
+}
+
+.bill {
+	display: block;
+	margin: auto;  /* center */ 
+}

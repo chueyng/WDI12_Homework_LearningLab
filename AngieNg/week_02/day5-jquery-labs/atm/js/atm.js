@@ -12,14 +12,6 @@ var checkingBalance = 0;
 var savingsBalance = 0;
 
 
-$(document).ready(function (){
-	$('#checking-deposit').click(depositChecking);
-	$('#checking-withdraw').click(withdrawChecking);	
-	$('#savings-deposit').click(depositSaving);	
-	$('#savings-withdraw').click(withdrawSaving);
-});
-
-
 var depositSaving = function () {
 	var savingsAmount = $('#savings-amount').val();
 	savingsAmount = parseInt(savingsAmount);
@@ -74,23 +66,23 @@ var withdrawChecking = function() {
 	clearInputs(); 
 }
 
-var withdrawingProcess = function(amount, value1, value2) {
+var withdrawingProcess = function(amount, balance, otherBalance) {
 
 	//Process 1: Check saving/checking amount > 0 and do normal withdrawing
-	if (value1 >= amount) {
-		value1 -= amount;
+	if (balance >= amount) {
+		balance -= amount;
 	} else {
 		//Process 2: Overdraft protection process
-		if ((value1 + value2) >= amount) {
-			var remainingAmount = value1 - amount;	
-			value1 = 0;
-			value2 += remainingAmount;
+		if ((balance + otherBalance) >= amount) {
+			var remainingAmount = balance - amount;	
+			balance = 0;
+			otherBalance += remainingAmount;	//remainingAmount will return negative value, so have to put '+' sign to deduct.
 		} else {
 			alert("Sorry, you have not enough money to withdraw from both accounts with this amount $" +amount);
 		}
 	} 
 
-	return [value1, value2];	
+	return [balance, otherBalance];	
 
 }
 
@@ -113,3 +105,10 @@ var clearInputs = function() {
 	$('#savings-amount').val("");
 	$('#checking-amount').val("");
 }
+
+$(document).ready(function (){
+	$('#checking-deposit').click(depositChecking);
+	$('#checking-withdraw').click(withdrawChecking);	
+	$('#savings-deposit').click(depositSaving);	
+	$('#savings-withdraw').click(withdrawSaving);
+});

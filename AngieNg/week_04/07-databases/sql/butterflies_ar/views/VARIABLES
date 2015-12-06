@@ -1,0 +1,21 @@
+VARIABLES
+
+You need an @ at the front of a variable if you want to be able to see that in a view
+
+DATABASE
+
+Databases always need to be plural and lowercase (seperated by underscores if multiple words)
+
+ACTIVE RECORD
+
+classes always need to be CamelCase - Uppercase first letter, capital letter for every word after. e.g. MacComputer and they need to be singular
+
+ASSOCIATIONS
+
+If a table has a has_many relationship
+
+@plant.butterflies (name is always plural (normally the name of the table))
+
+If a table has a belongs_to relationship
+
+@butterfly.plant  (name is always singular (normally the lower case version of the class))
