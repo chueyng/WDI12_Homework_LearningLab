@@ -1,0 +1,12 @@
+<h1><%= @ocean.name %></h1>
+
+<p><strong>Location:</strong> <%= @ocean.location %></p>
+<p><strong>Area:</strong> <%= @ocean.area %>km<sup>2</sup></p>
+<p><strong>Average Depth:</strong> <%= @ocean.avg_depth %>m</p>
+<% unless @ocean.image.nil? %>
+  <p><%=image_tag(@ocean.image) %> </p>
+<% end %>
+<p>
+  <%= button_to('Edit', "/oceans/#{@ocean.id}/edit", :method => :get) %>
+  <%= button_to('Delete', "/oceans/#{@ocean.id}", :method => :delete) %>
+</p>  

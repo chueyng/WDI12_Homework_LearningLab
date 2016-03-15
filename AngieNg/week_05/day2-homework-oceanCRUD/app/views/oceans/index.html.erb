@@ -1,0 +1,7 @@
+<h1>All Oceans</h1>
+
+<ul>
+  <% @oceans.each do |ocean| %>
+  <li><a href="/oceans/<%= ocean.id %>"><%= ocean.name %></a> covers <%= ocean.area %>km<sup>2</sup></li>
+  <% end %>
+</ul>

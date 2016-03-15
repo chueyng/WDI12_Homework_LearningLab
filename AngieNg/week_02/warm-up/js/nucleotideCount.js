@@ -25,7 +25,7 @@ Partially inspired by Chapter 1 in Chris Pine's online Learn to Program tutorial
 */
 
 /*
-var planets = [{ Mercury: 0.2408467 }, 
+var planets = [{ Mercury: 0.2408467 },
 			   { Mars: 1.8808158 },
 			   { Jupiter: 11.862615 },
 			   { Saturn: 29.4474498 },
@@ -48,11 +48,10 @@ console.log(calcAge(1031000000));
 
 */
 
-/* Jack Version */
 var SpaceAge = {
 
 	orbitalPeriods: {
-		Mercury: 0.2408467, 
+		Mercury: 0.2408467,
 	    Mars: 1.8808158,
 	    Jupiter: 11.862615,
 	    Saturn: 29.4474498,
@@ -77,4 +76,4 @@ var SpaceAge = {
 	}
 }
 
-ageOnOtherEarth('Mercury', 103100); 
+ageOnOtherEarth('Mercury', 103100);

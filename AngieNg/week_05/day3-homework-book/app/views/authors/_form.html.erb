@@ -1,0 +1,31 @@
+<%= form_for @author do |f| %>
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name, :required => true %>
+</p>
+<p>
+  <%= f.label :pen_name %>
+  <%= f.text_field :pen_name, :required => true %>
+</p>
+<p>
+  <%= f.label :nationality %>
+  <%= f.text_field :nationality, :required => true %>
+</p>
+<p>
+  <%= f.label :dob, "Date of Birth"  %>
+  <%= f.date_field :dob, :required => true %>
+</p>
+<p>
+  <%= f.label :genre %>
+  <%= f.text_field :genre, :required => true %>
+</p>
+<p>
+  <%= f.label :period %>
+  <%= f.text_field :period, :required => true %>
+</p>
+<p>
+  <%= f.label :image %>
+  <%= f.url_field :image, :required => true %>
+</p>
+<%= f.submit %>
+<% end %>

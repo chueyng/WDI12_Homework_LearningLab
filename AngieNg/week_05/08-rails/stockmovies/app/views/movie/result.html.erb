@@ -1,0 +1,7 @@
+<h1> Movie Title: <%=@movie_name%> </h1>
+
+<% unless @movie_poster.nil? %>
+  <a href="<%=@movie_url%>"><img src="<%=@movie_poster%>" alt=""></a>
+<% end %>
+<p><strong>Actors: </strong><%=@movie_actors%></p>
+<p><strong>Plot: </strong> <%=@movie_plot%></p>

@@ -1,16 +1,15 @@
 /*
 Firstly, a matches function which receives a word and an array of words
-Secondly, an areAnagrams function that does all the 
+Secondly, an areAnagrams function that does all the
 Thirdly, a hasSameLetters function
 
 */
-/* Jack's version */
 
 var Anagram = {
 	hasSameLetters: function (word, candidates) {
 		word = word.split("").sort().join("");
 		candidates = candidates.split("").sort().join("");
-		
+
 		return word === candidates;
 	},
 
@@ -27,7 +26,7 @@ var Anagram = {
 		}
 		return false;
 
-		// return Anagram.hasSameLetters(word, candidates) && word ! == candidates; 
+		// return Anagram.hasSameLetters(word, candidates) && word ! == candidates;
 	},
 
 	matches: function (word, candidates) {
@@ -51,31 +50,3 @@ var Anagram = {
 var word = "listen";
 var potientialWords = ["enlists", "inlets", "preserve"];
 Anagram.matches(word, potientialWords);
-
-/*
-var Anagram = {
-
-	wordList : ['enlists', 'google', 'inlets', 'banana'],
-
-	eachWordfromListing : function () {
-		for (var i = 0; i < wordList.length; i++) {
-			return eachWord = wordList[i];
-	}
-
-	charCheck : function (word) {
-		var eachWord = Anagram.eachWordfromListing();
-
-		for (var j = 0; j < eachWord.length; j++) {
-			for (var k = 0; k < word.length; k++) {
-				if (eachWord[j].indexOf(word[k])) >  0){
-					return eachWord;
-				}
-			}
-		}
-	}
-
-}
-
-console.log(Anagram.charCheck('listen'));
-
-*/

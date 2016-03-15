@@ -1,0 +1,31 @@
+<%= form_for @book do |f| %>
+<p>
+  <%= f.label :title %>
+  <%= f.text_field :title, :required => true %>
+</p>
+<p>
+  <%= f.label :desc %>
+  <%= f.text_field :desc, :required => true %>
+</p>
+<p>
+  <%= f.label :pages %>
+  <%= f.text_field :pages, :required => true %>
+</p>
+<p>
+  <%= f.label :publ_date, "Published Date"%>
+  <%= f.date_field :publ_date,  :required => true %>
+</p>
+<p>
+  <%= f.label :publisher %>
+  <%= f.text_field :publisher, :required => true %>
+</p>
+<p>
+  <%= f.label :image %>
+  <%= f.url_field :image, :required => true %>
+</p>
+<p>
+  <%= f.label :author_id %>
+  <%= f.select :author_id, Author.all.map{ |a| [a.name, a.id]}, :include_blank => true %>
+</p>
+<%= f.submit %>
+<% end %>

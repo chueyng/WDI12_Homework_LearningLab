@@ -1,0 +1,73 @@
+$(document).ready(function () {
+  $('#getLucky').on('click', function () {
+    
+    var request = new XMLHttpRequest();
+    request.open('GET', '/random');
+
+    // Define a callback for when the request is done.
+    request.onreadystatechange = function () {
+      if (request.readyState != 4) {return;}
+
+      //request.responseText is now available
+      // THIS IS THE ONLY PLACE WHERE WE CAN USEFULLY ACCESS request.responseText
+      $('#result').text(request.responseText);
+    }
+
+    request.send(); //Initiate the request
+
+  });
+
+  $('#getTime').on('click', function () {
+
+    var request = new XMLHttpRequest();
+    request.open('GET', '/time');
+
+    request.onreadystatechange = function () {
+      if (request.readyState != 4) {return;}
+
+      $('#result').text(request.responseText);
+    }
+    request.send();
+  });
+});
+
+// var request = new XMLHttpRequest();
+// request.open('GET', '/time');
+
+// var counter = 0;
+
+// request.onreadystatechange = function () {
+//   console.log('readyState value is now', request.readyState);
+//     if (request.readyState !== 4) {
+//       return;
+//     }
+//     console.log('The server time is', request.responseText);
+//   // counter++;
+//   // if (counter === 3) {
+//   //   console.log('readuState changed');
+//   // }  
+// };
+
+// request.send();
+
+// // setTimeout(function(){
+// //   console.log('The current server time is ', request.responseText);
+// // }, 1000);
+
+// //////////////////////////////////////////////////////////////////////
+// var request2 = new XMLHttpRequest();
+// request2.open('GET', '/random');
+
+// request2.onreadystatechange = function() {
+//   if (request2.readyState !== 4) {
+//     return;   //Data is not ready yet
+//   }
+
+//   console.log('Your lucky number is', request2.responseText);
+// };
+
+// request2.send();
+
+
+
+

@@ -55,51 +55,10 @@ var Nucleotides = {
 			"A" : Nucleotides.count(string, 'A'),
 			"C" : Nucleotides.count(string, 'C'),
 			"D" : Nucleotides.count(string, 'T'),
-			"G" : Nucleotides.count(string, 'G')						
+			"G" : Nucleotides.count(string, 'G')
 		};
 	}
 };
 
 Nucleotides.count("ATCGATCT", "T");
-
-
-
-/*
-
-var DNA = ['A', 'C', 'G', 'T'];
-var RNA = ['A', 'C', 'G', 'U'];
-
-var Nucleotide = {
-		getNucleotide : function () {
-			var nucleotides = [];
-
-			for (var i = 0; i < DNA.length; i++) {
-				for (var j = 0; j < RNA.length; j++) {
-					if (RNA[j] === DNA[i]) {
-						nucleotides.push(RNA[j]);
-						j = RNA.length;
-						i += 1;
-					} else {
-						nucleotides.push(DNA[i]);
-						nucleotides.push(RNA[j]);
-					}
-				}
-			}
-			console.log("nucleotides = " +nucleotides);
-		},
-
-		countNucleotide: function(string) {
-
-		}
-
-
-}
-
-Nucleotide.countNucleotide();
-
-*/
-
-
-
-
 

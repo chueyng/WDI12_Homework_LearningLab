@@ -1,0 +1,75 @@
+$(document).ready(function (){
+
+    $('#movie_title').on('keypress',function (e) {
+      if (e.which == 13) {
+        // Clear all movie's data
+        $('#movie_name').text("");
+        $('img').removeAttr('src'); 
+                
+        if ($('#movie_title').val() != "") {
+          var request = new XMLHttpRequest();
+          request.open('GET', 'http://omdbapi.com/?t='+ $('#movie_title').val());
+
+          // Define a callback for when the request is done.
+          request.onreadystatechange = function () {
+            if (request.readyState != 4) {return;}
+
+            var info = JSON.parse(request.responseText);
+            if (info['Response'] == "False") {
+              $('#error').text(info['Error']); 
+            } else if (info['Poster'] == 'N/A') {
+              $('#movie_name').text('Movie Title: '+info['Title']);
+              $('#error').text("Movie's poster not found!");
+            } else {  
+              $('#movie_name').text('Movie Title: '+info['Title']);
+              $('#poster').attr('src', info['Poster']);
+            } 
+            console.log(info);
+          }  
+          request.send();
+
+        } else {
+          $('#error').text('Error: Please enter your movie title!');
+        }  
+      }  
+    });
+
+    $('#movie_list').on('keypress',function (e) {
+      if (e.which == 13) {
+        // Clear movie's image element
+        $('#poster').removeAttr('src');
+
+        if ($('#movie_list').val() != "") {
+          var request = new XMLHttpRequest();
+          request.open('GET', 'http://omdbapi.com/?s='+ $('#movie_list').val());
+
+          // Define a callback for when the request is done.
+          request.onreadystatechange = function () {
+            if (request.readyState != 4) {return;}
+
+            var info = JSON.parse(request.responseText);
+            if (info['Response'] == "False") {
+              $('#error').text(info['Error']);
+            } 
+            var pictures = [];
+            for (var i = 0; i < info['Search'].length; i++) {
+              if (info['Search'][i].Poster != 'N/A') {
+                pictures.push(info['Search'][i].Poster);
+              }  
+            }
+
+            pictures.map(function(img_url) {
+              var img = new Image();
+              img.src = img_url;
+              img.id = 'poster';
+              document.body.appendChild(img);
+            });
+          }  
+          request.send();
+
+        } else {
+          $('#error').text('Error: Please enter your movie title!');
+        }  
+      }  
+    });
+});

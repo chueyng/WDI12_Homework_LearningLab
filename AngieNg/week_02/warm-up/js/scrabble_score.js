@@ -23,7 +23,7 @@ You can play a :double or a :triple word.
 */
 
 
-var scrabble_value = { value_1 : ['A', 'E', 'I', 'O', 'U', 'L', 'N', 'R', 'S', 'T'], 
+var scrabble_value = { value_1 : ['A', 'E', 'I', 'O', 'U', 'L', 'N', 'R', 'S', 'T'],
 				       value_2 : ['D', 'G'],
 				       value_3 : ['B', 'C', 'M', 'P'],
 				       value_4 : ['F', 'H', 'V', 'W', 'Y'],
@@ -36,7 +36,7 @@ var totalReturnScoreValue = 0;
 var scrabble_score = function (inLetter) {
 
 var returnScoreValue = 0;
-	
+
 	if (scrabble_value.value_1) {
 		returnScoreValue = 1;
 	} else if (scrabble_value.value_2) {
@@ -57,40 +57,18 @@ var returnScoreValue = 0;
 		console.log("**** = " + scrabble_value.value_1  + "*** inLetter = " +inLetter[i]);
 		/*
 		if (((scrabble_value.value_1).indexOf(inLetter[i]) > -1) || ((scrabble_value.value_2).indexOf(inLetter[i]) > -1 )
-			|| ((scrabble_value.value_3).indexOf(inLetter[i]) > -1) || ((scrabble_value.value_4).indexOf(inLetter[i]) > -1) 
+			|| ((scrabble_value.value_3).indexOf(inLetter[i]) > -1) || ((scrabble_value.value_4).indexOf(inLetter[i]) > -1)
 			||  ((scrabble_value.value_5).indexOf(inLetter[i]) > -1) || ((scrabble_value.value_8).indexOf(inLetter[i]) > -1)
 			|| ((scrabble_value.value_10).indexOf(inLetter[i]) > -1)) {
-			
+
 			console.log("returnScore = " +returnScoreValue[i] );
 			totalReturnScoreValue = totalReturnScoreValue + returnScoreValue[i] ;
 		}
 		*/
-	}	
-
-	return totalReturnScoreValue;	
-}
-/*
-	for (var i = 0; i < scrabble_value.length; i++) {
-		if ()
-		console.log("hi");
-			console.log(inLetter + " *** scrabbleValue = " +scrabble_value[i]);
-
-		var totalScore = 0;
-		inLetter = inLetter.toUpperCase();
-
-
-		for (var j = 0; j < inLetter.length; j++) {
-
-			if (inLetter[j].indexOf(scrabble_value[i]) > -1){
-				console.log(scrabble_value[i]);
-				totalScore += scrabble_value[i,j] ;
-			}	
-		}	
 	}
-	return totalScore;
-}
-*/
 
+	return totalReturnScoreValue;
+}
 
 console.log(scrabble_score('cabbage'));
 
@@ -98,7 +76,7 @@ console.log(scrabble_score('cabbage'));
 
 /** Jack version **/
 /*
-var letterScores = {'a': 1, 'e': 1, 'i': 1, 'o': 1, 'u': 1, 'l': 1, 'n': 1, 'r': 1, 's': 1, 't': 1, 'd': 2,'g': 2, 'b': 3, 'c': 3, 'm': 3, 'p': 3, 'f': 4, 'h': 4, 'v': 4, 'w': 4, 'y': 4, 'k':5, 
+var letterScores = {'a': 1, 'e': 1, 'i': 1, 'o': 1, 'u': 1, 'l': 1, 'n': 1, 'r': 1, 's': 1, 't': 1, 'd': 2,'g': 2, 'b': 3, 'c': 3, 'm': 3, 'p': 3, 'f': 4, 'h': 4, 'v': 4, 'w': 4, 'y': 4, 'k':5,
 'j': 8, 'x': 8, 'q': 10, 'z': 10};
 
 var score = function (word) {

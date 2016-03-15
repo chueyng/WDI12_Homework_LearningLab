@@ -1,0 +1,410 @@
+/**
+ *  If you want to override some bootstrap variables, you have to change values here.
+ *  The list of variables are listed here bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss
+ */
+$navbar-inverse-link-color: #5AADBB;
+$icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+
+/**
+ *  Do not remove the comments below. It's the markers used by wiredep to inject
+ *  sass dependencies when defined in the bower.json of your dependencies
+ */
+// bower:scss
+// endbower
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.thumbnail {
+  height: 200px;
+
+  img.pull-right {
+    width: 50px;
+  }
+}
+
+/**
+ *  Do not remove the comments below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector
+/* FLEX BOX */
+.flex-column, .flex-row { display: flex; flex-basis: auto; }
+.flex-column { flex-direction: column; }
+.flex-row { flex-direction: row; }
+.flex-grow { flex-grow: 1; }
+.flex-align-center { align-items: center; }
+.flex-content-center { align-content: center; }
+.flex-justify-center { justify-content: center; }
+.flex-justify-start { justify-content: flex-start; }
+.flex-justify-right { justify-content: flex-end; }
+.flex-align-bottom { align-items: flex-end; }
+.flex-shrink { flex-shrink: 1; }
+.flex-basis { flex-basis: 0%; }
+
+html, body {
+    font-family: 'Lato', sans-serif;
+}
+
+select {
+  border: 1px solid #111;
+  background: white;
+  width: 210px;
+  padding-left: 10px;
+  font-size: 1.1em;
+  color: gray;
+  border: 1px solid lightgray;
+  height: 44px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+}
+
+.results-listings-row {
+  background: #eee;
+}
+
+.result-image {
+  height: 200px;
+  background-size: cover;
+}
+
+.result-image-show {
+  height: 70vh;
+  background-size: cover;
+}
+
+.result-tile-container {
+  padding: 15px 0 0 15px;
+  height: 100%;
+  min-width: 33.33332%;
+}
+
+.result-tile-container:last-of-type {
+  padding-right: 15px;
+}
+
+.result-tile-container:first-of-type {
+  padding-left: 15px;
+}
+
+.result-tile-container:hover {
+  cursor: pointer;
+}
+
+.search-check-in {
+  padding-right: 10px;
+}
+
+.main-results-section {
+  background: rgba(250, 250, 250,1);
+  min-height: 500px;
+}
+
+.date-container.errors {
+  border: 1px solid #FB3640;
+  background: rgba(150, 100, 100, 0.4);
+}
+
+.home-how-it-works {
+  padding: 60px 120px;
+}
+
+.search-nav-row span {
+  text-transform: capitalize;
+  margin-right: 5px;
+}
+
+.search-nav-item:hover {
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+.search-nav-item i:before {
+  font-size: 2em;
+  color: grey;
+}
+
+.search-dates-header {
+  line-height: 44px;
+  font-size: 1.1em;
+}
+
+input.form-control.search-date-picker {
+  border-right: 1px solid rgba(204, 204, 204,1);
+  min-width: 120px;
+  width: 100%;
+}
+
+.search-input {
+  border: none;
+  width: 100%;
+}
+
+.filter-row-container {
+  padding: 20px 30px 0 30px;
+  text-transform: capitalize;
+  padding-bottom: 20px;
+}
+
+.filter-row-container .flex-row.filter-inner {
+  border-bottom: 1px solid rgba(228, 226, 226,1);
+  padding-bottom: 10px;
+}
+
+.search-inner-main-container {
+  width: 70%;
+  background: white;
+  margin-top: 30px;
+}
+
+input[type='text'].search-input {
+    padding-left: 50px;
+}
+
+.search-nav-inner {
+  position: relative;
+  bottom: 10px;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.search-nav-item, .search-nav-item span {
+  line-height: 25px;
+}
+
+.search-logo img {
+  height: 100%;
+  width: 25px;
+}
+
+.search-nav-row .flex-row {
+  padding: 15px 20px 0px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.search-nav-input.flex-row {
+  padding: 0;
+}
+
+.search-nav-row .flex-row:not(:last-of-type) {
+  border-right: 1px solid lightgrey;
+}
+
+.flex-row.search-logo.search-nav-item {
+  padding-top: 20px;
+}
+
+.nav-hero {
+  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4) ), url('http://resource.jerei.com/10887/13050715553075_0.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* home */
+.nav-header {
+  padding: 20px;
+  height: 80px;
+}
+
+.logo-home {
+  width: 25px;
+  margin-bottom: 8px;
+  -webkit-filter: brightness(0) invert(1);
+}
+
+.logo-home-container:hover {
+  cursor: pointer;
+}
+
+.logo-text-white {
+  font-size: 2em;
+  margin-left: 10px;
+  color: white;
+}
+
+.nav-objects * {
+  color: white;
+}
+
+.nav-title {
+  line-height: 48px;
+  margin: 0 5px 0 30px;
+}
+
+.nav-icon {
+  font-size: 2.3em;
+}
+
+.nav-hero {
+    background-color: lightblue;
+}
+
+.nav-hero-column {
+    width: 100%;
+}
+
+.nav-welcome {
+    text-transform: uppercase;
+    font-size: 4em;
+    font-weight: 700;
+    color: white;
+}
+
+.nav-rental {
+    font-size: 1.3em;
+    color: white;
+}
+
+.nav-middle-button {
+    padding: 30px 0;
+}
+
+.home-hero-button {
+    width: 150px;
+    background: rgba(255,255,255,0.3);
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 2px;
+    color: white;
+    text-transform: capitalize;
+    font-size: 1.2em;
+}
+
+.home-hero-button:hover, .home-host-button:hover {
+    cursor: pointer;
+    background: rgba(0,0,0,0.3);
+}
+
+.home-search-button {
+  width: 120px;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 2px;
+  color: white;
+  text-transform: capitalize;
+  font-size: 1.2em;
+  border: rgba(255,126,130,1);
+  border-bottom: 1px solid rgba(250,0,8,1);
+  background: rgba(251,54,64,1);
+}
+
+.home-host-button span {
+    margin: 0 10px;
+  }
+
+.home-search-button:hover {
+  background: rgba(246,85,93,1);
+  cursor: pointer;
+}
+
+.home-host-button {
+    height: 31px;
+    line-height: 28px;
+    width: 100%;
+    background: rgba(255,255,255,0);
+    border: 2px solid white;
+    text-align: center;
+    border-radius: 2px;
+    color: white;
+    font-size: 0.9em;
+    margin-top: 8px;
+}
+
+.middle-container {
+    padding: 100px 0;
+}
+
+.date-container {
+    background: rgba(0,0,0,0.4);
+    padding: 30px 0;
+    border: 1px solid rgba(0,0,0,0.4);
+}
+
+.date-container p.input-group {
+    margin: 0;
+}
+
+.dropdown-menu {
+    margin: 0;
+    border: 1px solid white;
+}
+
+.dropdown-menu li div table:focus, select:focus, button[role="heading"]:focus {
+    outline: 0;
+}
+
+.input-group .form-control {
+    border-right: 0px;
+    -webkit-box-shadow: none;
+    height: 44px;
+    line-height: 44px;
+    font-size: 1.1em;
+    width: 150px;
+    border-radius: 0;
+}
+
+.form-control.location-search-input {
+    width: 220px;
+}
+
+ul.dropdown-menu {
+    border-radius: 0;
+}
+
+/* datepicker styling */
+button.pull-left, button.pull-right, button[role="heading"] {
+  background-color: white;
+  border: none;
+  outline: 0;
+}
+
+button[role="heading"] {
+  cursor: auto;
+}
+
+.datepicker-day-button {
+  background-color: white;
+  border-right: 1px solid lightgray;
+  border-left: 0px;
+  border-bottom: 0px;
+  padding: 7px 9px;
+}
+
+.datepicker-day-button.active {
+    background: #1F487E;
+    border: 1px solid #1F487E;
+    color: white;
+}
+
+.datepicker-day-button.active .text-info {
+    color: white;
+}
+
+.datepicker-day-button.active:hover {
+    background: #FB3640;
+    border: 1px solid #FB3640;
+}
+
+.datepicker-day-button:hover {
+    background: #FB3640;
+    color: white;
+}
+
+.text-muted {
+    opacity: 0;
+}
+
+.text-muted:hover {
+    color: rgba(255,90,95,1);
+}

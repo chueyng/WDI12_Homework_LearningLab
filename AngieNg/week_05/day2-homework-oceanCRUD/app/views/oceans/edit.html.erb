@@ -1,0 +1,10 @@
+<h1>Update Ocean Data</h1>
+<form action="/oceans/<%=@ocean.id%>" method="post">
+  <p>Name: <input type="text" name="ocean[name]" value="<%= @ocean.name %>"></p>
+  <p>Location: <input type="text" name="ocean[location]" value="<%= @ocean.location %>"></p>
+  <p>Area: <input type="number" name="ocean[area]" value="<%= @ocean.area %>"></p>
+  <p>Average Depth: <input type="number" name="ocean[avg_depth]" value="<%= @ocean.avg_depth %>"></p>
+  <p>Image url: <input type="url" name="ocean[image]" value="<%= @ocean.image %>"></p>
+
+  <button>Update</button>
+</form>

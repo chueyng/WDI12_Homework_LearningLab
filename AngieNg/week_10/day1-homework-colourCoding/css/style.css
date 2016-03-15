@@ -1,0 +1,28 @@
+#main {
+  margin: 0 auto;
+  font-size: 0;
+  height: 600px;
+  width: 100%;
+  z-index: 2;
+}
+
+#colors {
+  width: 100%;
+}
+
+#colors div {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  z-index: 1;
+}
+
+p {
+  font-size: 20px;
+  margin: -400px auto;
+  display: block;
+  background-color: #ffffff;
+  width: 300px;
+  height: 30px;
+  text-align: center;
+}

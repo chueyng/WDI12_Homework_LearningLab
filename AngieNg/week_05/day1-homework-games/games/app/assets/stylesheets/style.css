@@ -1,0 +1,118 @@
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
+
+*{
+  font-family: 'Inconsolata',;
+}
+
+body {
+  margin: auto;
+}
+
+nav {
+  padding: 20px 20px 20px 20px;
+}
+
+nav a {
+  padding-right: 20px;
+}
+
+#container {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.content-ball {
+  background: url(http://www.allleftturns.com/wp-content/uploads/articles/magic-8-ball%20it%20is%20certain.jpg);
+  width: 220px;
+  height: 220px;
+}
+
+.content-p {
+  background-color: black;
+  width: 100px;
+  height: 100px;
+  margin: -155px 62px 0px;
+  border-radius: 100%;
+  color: red;
+  font-weight:bold;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+#content-rps {
+  padding-top: 30px;    
+  display: flex;
+  flex-direction: row;
+  font-size: 2em;
+}
+
+.user {
+  width: 220px;
+  height: 220px;  
+  text-align: center;
+  color: blue;
+  flex-grow: 1;
+}
+
+.user img {
+  width: 220px;
+  height: 220px;  
+}
+
+.middle {
+  text-align: center;
+  color: orange;
+  flex-grow: 1;
+}
+
+.computer {
+  text-align: center;
+  color: red;
+  flex-grow: 1;
+}
+
+.computer img {
+  width: 220px;
+  height: 220px;  
+}
+
+#winning-result h2 {
+  color: red;
+  text-align: center;
+  font-size: 2em;
+}
+
+#rock {
+  width: 150px;
+  height: 150px;
+  padding-right: 80px;
+}
+
+#paper {
+  width: 150px;
+  height: 150px;
+  padding-right: 80px;
+}
+
+#scissors {
+  width: 150px;
+  height: 150px;
+}
+
+form {
+  padding-top: 30px;
+}
+
+.m-ask {
+  margin: 0 380px;
+  width: 100%;
+}
+
+.back {
+ padding: 100px 40px
+}
+
+input {
+  width: 60px;
+  font-size: 1.3em;
+}
